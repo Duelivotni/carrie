@@ -12,12 +12,6 @@ public interface TokenService {
 
     String generateAccessToken(UUID id, String email, String role, @Nullable String location);
 
-    String generateAccessToken(
-            Long id,
-            String email,
-            String role,
-            String location);
-
     String generateRefreshToken(String email);
 
     String getEmailFromRefreshToken(String refreshToken);

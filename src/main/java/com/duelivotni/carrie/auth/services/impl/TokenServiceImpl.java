@@ -17,10 +17,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Service;
 
 import java.nio.charset.StandardCharsets;
-import java.util.Collections;
-import java.util.Date;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 
 import static com.duelivotni.carrie.constants.Constants.TOKEN_PREFIX;
 import static com.duelivotni.carrie.constants.Messages.TOKEN_EXPIRED;
@@ -40,7 +37,7 @@ public class TokenServiceImpl
 
     @Override
     public String generateAccessToken(
-            Long id,
+            UUID id,
             String email,
             String role,
             String location) {

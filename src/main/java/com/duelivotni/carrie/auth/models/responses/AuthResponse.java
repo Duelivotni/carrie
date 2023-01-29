@@ -1,6 +1,6 @@
 package com.duelivotni.carrie.auth.models.responses;
 
-import com.art.oko.modules.user.models.entities.User;
+import com.duelivotni.carrie.user.models.entities.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

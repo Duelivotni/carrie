@@ -10,15 +10,10 @@ import java.util.Optional;
 
 public interface UserService {
 
-    User registerAdmin(String email, String password, Long location_id);
-
     User registerAdmin(
             String email,
             String password,
             String location);
-
-    User registerManager(String email, String password, Long location_id);
-    User registerUser(String email, String password, Long location_id, Role role);
 
     User registerManager(
             String email,
@@ -38,17 +33,9 @@ public interface UserService {
     List<User> findAll();
     User updateUser(Long id, UserRequest request);
 
-    User updateUser(
-            Long id,
-            UserRequest request);
-
     User getById(Long id);
     User getByEmail(String email);
     void deleteUserById(Long id);
     void resetPassword(Long id, UserPasswordRequest request);
 
-
-    void resetPassword(
-            Long id,
-            UserPasswordRequest request);
 }
